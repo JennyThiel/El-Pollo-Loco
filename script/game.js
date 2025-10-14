@@ -1,12 +1,12 @@
 let canvas;
 let ctx;
-let character = new Image();
+let character = new movableObject();
 
 function init() {
     canvas = document.getElementById('canvas');
-    ctx = canvas.getContext('2d')
+    ctx = canvas.getContext('2d');
 
-    character.src = '../weiterenPfad'
+    console.log('My character is', character);
+    
 
-    ctx.drawImage(character, 20, 20, 50, 150)
 }
