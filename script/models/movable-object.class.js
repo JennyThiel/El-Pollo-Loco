@@ -17,6 +17,7 @@ class MovableObject {
     }
 
     moveLeft() {
-        
+        // this.enemie = new this.enemie();
+        // this.enemie.img = path;
     }
 }
