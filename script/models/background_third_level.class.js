@@ -1,5 +1,5 @@
 class Background_third_level extends MovableObject {
-    y = 120;
+    y = 220;
     x = 0;
     height = 200;
     width = 720;

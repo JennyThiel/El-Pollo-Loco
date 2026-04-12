@@ -1,5 +1,5 @@
 class Background_second_level extends MovableObject {
-    y = 320;
+    y = 250;
     x = 0;
     height = 200;
     width = 720;
