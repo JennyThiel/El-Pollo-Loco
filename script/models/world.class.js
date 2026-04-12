@@ -11,7 +11,8 @@ class World {
     ];
 
     backgrounds = [
-        new Background()
+        new Background_first_level(),
+        new Background_second_level()
     ];
 
     canvas;
