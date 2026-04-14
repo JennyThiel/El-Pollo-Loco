@@ -6,6 +6,7 @@ class MovableObject {
     height = 300;
     imageCashe = {};
     currentImage = 0;
+    speed = 0.2;
 
     // loadImage(path) {img/test.png}
     loadImage(path) {
@@ -32,7 +33,8 @@ class MovableObject {
     }
 
     moveLeft() {
-        // this.enemie = new this.enemie();
-        // this.enemie.img = path;
+        setInterval(() => {
+            this.x -= this.speed;
+        },1000 / 60);  
     }
 }
