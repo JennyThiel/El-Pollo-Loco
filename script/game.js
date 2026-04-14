@@ -1,6 +1,6 @@
 let canvas;
 let world;
-// let keyboard = new keyboard();
+let keyboard = new Keyboard();
 
 
 
@@ -13,7 +13,7 @@ function init() {
     
 }
 
-// window.addEventListener('keypress', (event) => {
-//     console.log(event);
+window.addEventListener('keydown', (e) => {
+    console.log(e);
     
-// });
+});
