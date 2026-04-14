@@ -2,8 +2,6 @@ let canvas;
 let world;
 let keyboard = new Keyboard();
 
-
-
 function init() {
     canvas = document.getElementById('canvas');
     world = new World(canvas);
@@ -13,7 +11,13 @@ function init() {
     
 }
 
-window.addEventListener('keydown', (e) => {
+window.addEventListener('keyup', (e) => {
     console.log(e);
     
 });
+
+function moveCharater() {   
+    if (keyboard.RIGHT['ArrowRight'== true]) {
+        world.character.moveRight();
+    }
+}
