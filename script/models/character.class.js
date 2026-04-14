@@ -27,7 +27,7 @@ class Character extends MovableObject {
             let path = this.IMAGES_WALKING[i];
             this.img = this.imageCashe[path];
             this.currentImage++;
-        },300);
+        },200);
     }
        
 

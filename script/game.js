@@ -1,5 +1,6 @@
 let canvas;
 let world;
+let keyboard = new keyboard();
 
 
 
@@ -11,3 +12,10 @@ function init() {
     console.log('My character is', world.character);
     
 }
+
+
+
+window.addEventListener('keypress', (event) => {
+    console.log(event);
+    
+});
