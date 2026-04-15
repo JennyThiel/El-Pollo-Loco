@@ -29,8 +29,14 @@ class MovableObject {
 
     moveRight() {
         console.log('Moving right');
-        
+        if (keyboard.RIGHT['ArrowRight'== true]) {
+            setInterval(() => {
+                this.x += this.speed;
+            });  
+        }
+    moveRight();
     }
+    
 
     moveLeft() {
         setInterval(() => {
