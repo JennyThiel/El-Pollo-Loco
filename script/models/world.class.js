@@ -17,9 +17,11 @@ class World {
 
     setWorld() {
         this.character.world = this;
+        this.character.animate();
     }
 
     draw() {
+        this.update();
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
         this.ctx.translate(this.camera_x, 0);
@@ -39,6 +41,27 @@ class World {
         });
     }
 
+    update() {
+        if (this.keyboard.RIGHT && this.character.x < this.level.level_end_x) {
+            this.character.x += this.character.speed;
+            this.character.otherDirection = false;
+        }
+
+        if (this.keyboard.LEFT && this.character.x > -620) {
+            this.character.x -= this.character.speed;
+            this.character.otherDirection = true;
+        }
+        this.camera_x = -this.character.x + 100;
+
+        this.level.clouds.forEach(cloud => {
+            cloud.x -= cloud.speed;
+        });
+
+        this.level.enemies.forEach(enemy => {
+            enemy.x -= enemy.speed;
+        });
+    }
+
     addToObjectMap(objects) {
         objects.forEach(o => {
             this.addToMap(o);
@@ -53,7 +76,9 @@ class World {
             mo.x = mo.x * -1;
         }
 
-        this.ctx.drawImage(mo.img, mo.x, mo.y, mo.width, mo.height);
+        if (mo.img && mo.img.complete && mo.img.naturalWidth > 0) {
+            this.ctx.drawImage(mo.img, mo.x, mo.y, mo.width, mo.height);
+        }
         if (mo.otherDirection) {
             mo.x = mo.x *-1;
             this.ctx.restore();

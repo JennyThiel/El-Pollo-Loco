@@ -6,12 +6,15 @@ class MovableObject {
     height = 300;
     imageCashe = {};
     currentImage = 0;
-    speed = 0.15;
+    speed = 1;
     otherDirection = false;
 
     // loadImage(path) {img/test.png}
     loadImage(path) {
-        this.img = new Image(); //this.img = document.getElementById('image'); <img id="image" src="img/test.png">
+        this.img = new Image();
+        this.img.onload = () => {
+            console.log('Image loaded:', path);
+        };
         this.img.src = path;
     }
 
@@ -23,6 +26,9 @@ class MovableObject {
     loadImages(arr) {
         arr.forEach((path) => {
             let img = new Image();
+            img.onload = () => {
+                console.log('Image loaded:', path);
+            };
             img.src = path;
             this.imageCashe[path] = img;
         });
