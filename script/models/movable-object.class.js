@@ -26,12 +26,17 @@ class MovableObject {
     loadImages(arr) {
         arr.forEach((path) => {
             let img = new Image();
-            img.onload = () => {
-                console.log('Image loaded:', path);
-            };
             img.src = path;
+            img.style = 'transform: scaleX(-1)';
             this.imageCashe[path] = img;
         });
+    }
+
+    playAnimation(images) {
+        let i = this.currentImage % this.IMAGES_WALKING.length; // let i = 7 % 6 => 1 Rest 1
+        let path = images[i];
+        this.img = this.imageCashe[path];
+        this.currentImage++;
     }
 
     moveRight() {
