@@ -23,6 +23,10 @@ class Endboss extends MovableObject {
     }
 
     animate() {
-        this.playAnimation(this.IMAGES_WALKING);
+        setInterval(() => {
+            this.playAnimation(this.IMAGES_WALKING);
+        }, 200);
     }
+        
+    
 }
