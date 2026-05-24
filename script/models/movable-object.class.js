@@ -6,12 +6,12 @@ class MovableObject {
     height = 300;
     imageCashe = {};
     currentImage = 0;
-    speed = 1;
+    speed = 0.15;
     otherDirection = false;
 
     // loadImage(path) {img/test.png}
     loadImage(path) {
-        this.img = new Image();
+        this.img = new Image(); // tihs.img - document.getElementById('image') <img id="image" src>
         this.img.onload = () => {
             console.log('Image loaded:', path);
         };
@@ -27,7 +27,6 @@ class MovableObject {
         arr.forEach((path) => {
             let img = new Image();
             img.src = path;
-            img.style = 'transform: scaleX(-1)';
             this.imageCashe[path] = img;
         });
     }
