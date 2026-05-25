@@ -21,16 +21,13 @@ class World {
     }
 
     draw() {
-        //this.update(); // <-
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
         this.ctx.translate(this.camera_x, 0);
-
         this.addToObjectMap(this.level.backgroundObjects);
-
         this.addToMap(this.character);
         this.addToObjectMap(this.level.enemies);
         this.addToObjectMap(this.level.clouds);
+        // this.addToObjectMap(this.level.bottle);
         
         this.ctx.translate(-this.camera_x, 0);
        

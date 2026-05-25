@@ -27,6 +27,7 @@ class MovableObject {
         arr.forEach((path) => {
             let img = new Image();
             img.src = path;
+            img.style = 'transform scale(-1)';
             this.imageCashe[path] = img;
         });
     }
