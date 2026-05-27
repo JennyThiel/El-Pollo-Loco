@@ -6,12 +6,12 @@ class MovableObject {
     height = 300;
     imageCashe = {};
     currentImage = 0;
-    speed = 1;
+    speed = 0.15;
     otherDirection = false;
 
     // loadImage(path) {img/test.png}
     loadImage(path) {
-        this.img = new Image();
+        this.img = new Image(); // tihs.img - document.getElementById('image') <img id="image" src>
         this.img.onload = () => {
             console.log('Image loaded:', path);
         };
@@ -26,12 +26,17 @@ class MovableObject {
     loadImages(arr) {
         arr.forEach((path) => {
             let img = new Image();
-            img.onload = () => {
-                console.log('Image loaded:', path);
-            };
             img.src = path;
+            img.style = 'transform scale(-1)';
             this.imageCashe[path] = img;
         });
+    }
+
+    playAnimation(images) {
+        let i = this.currentImage % this.IMAGES_WALKING.length; // let i = 7 % 6 => 1 Rest 1
+        let path = images[i];
+        this.img = this.imageCashe[path];
+        this.currentImage++;
     }
 
     moveRight() {
