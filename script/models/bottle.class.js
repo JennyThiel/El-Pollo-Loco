@@ -1,16 +1,13 @@
 class Bottle extends MovableObject {
-     y = 135;
-    width = 120;
-    height = 300;
+    y = 365;
+    width = 80;
+    height = 50;
 
-    constructor(imagePath) {
+    constructor(imagePath, x) {
         super().loadImage(imagePath);
+        this.x = x;
     
-        this.x = Math.random() * 500; // Zahl zwischen 200 und 700
-        this.animate();
+        this.x = Math.random() * 500;
+        
     }
-
-    // animate() {
-    //    this.moveLeft(); 
-    // }
 }
