@@ -47,9 +47,12 @@ const level1 = new Level (
     [
         new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
         new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
+        new Bottle('img/6_salsa_bottle/2_salsa_bottle_on_ground.png'),
         new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
-        new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
-        new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
+        new Bottle('img/6_salsa_bottle/2_salsa_bottle_on_ground.png'),
+    ],
+    [
+        //new Statusbar('img/7_statusbars/1_statusbar/2_statusbar_health/blue/0.png'),
     ],
    
 );
