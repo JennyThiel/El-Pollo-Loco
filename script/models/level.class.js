@@ -3,7 +3,7 @@ class Level {
     clouds;
     backgroundObjects;
     bottles;
-    //coins;
+    coins;
     level_end_x = 2250;
     statusbar;
 
