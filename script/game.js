@@ -6,7 +6,6 @@ function init() {
     canvas = document.getElementById('canvas');
     world = new World(canvas, keyboard);
     
-
     console.log('My character is', world.character);
     
 }
@@ -28,7 +27,7 @@ window.addEventListener('keydown', (e) => {
         keyboard.SPACE = true;
     }
     
-     console.log(e);
+    console.log(e);
 });
 
 window.addEventListener('keyup', (e) => {
