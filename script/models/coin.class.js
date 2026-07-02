@@ -1,7 +1,7 @@
-class Bottle extends MovableObject {
-    y = 365;
-    width = 80;
-    height = 50;
+class Coin extends MovableObject {
+    y = 165;
+    width = 100;
+    height = 100;
 
     constructor(imagePath, x = Math.random() * 300) {
         super().loadImage(imagePath);
