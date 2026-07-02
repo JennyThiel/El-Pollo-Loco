@@ -4,12 +4,12 @@ class Character extends MovableObject {
     height = 300;
     speed = 10;
     IMAGES_WALKING = [
-            'img/2_character_pepe/2_walk/W-21.png',
-            'img/2_character_pepe/2_walk/W-22.png',
-            'img/2_character_pepe/2_walk/W-23.png',
-            'img/2_character_pepe/2_walk/W-24.png',
-            'img/2_character_pepe/2_walk/W-25.png', 
-            'img/2_character_pepe/2_walk/W-26.png',
+        'img/2_character_pepe/2_walk/W-21.png',
+        'img/2_character_pepe/2_walk/W-22.png',
+        'img/2_character_pepe/2_walk/W-23.png',
+        'img/2_character_pepe/2_walk/W-24.png',
+        'img/2_character_pepe/2_walk/W-25.png', 
+        'img/2_character_pepe/2_walk/W-26.png',
     ];
 
     IMAGES_JUMPING = [
@@ -38,15 +38,15 @@ class Character extends MovableObject {
         setInterval(() => {
            // this.walking_sound.pause();
             if (this.world.keyboard.RIGHT && this.x < this.world.level.level_end_x) {
-                this.x += this.speed;
-                this.otherDirection = false;
+                this.moveRight();
                // this.walking.sound.play();
+               this.otherDirection = false;
             }
 
             if (this.world.keyboard.LEFT && this.x > -620) {
-                this.x -= this.speed;
-                this.otherDirection = true;
+                this.moveLeft();
                // this.walking.sound.play();
+                this.otherDirection = true;
             }
 
             
@@ -79,7 +79,5 @@ class Character extends MovableObject {
     }
        
 
-    jump() {
-        this.speedY = 30;
-    }
+ 
 }

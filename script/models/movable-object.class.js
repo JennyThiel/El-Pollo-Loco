@@ -56,19 +56,11 @@ class MovableObject {
     }
 
     moveRight() {
-        console.log('Moving right');
-        if (keyboard.RIGHT['ArrowRight'== true]) {
-            setInterval(() => {
-                this.x += this.speed;
-            });  
-        }
-    moveRight();
+        this.x += this.speed;
     }
     
     moveLeft() {
-        setInterval(() => {
-            this.x -= this.speed;
-        },1000 / 60);  
+        this.x -= this.speed; 
     }
 
     jump() {
