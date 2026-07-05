@@ -12,7 +12,6 @@ const level1 = new Level (
         new Chicks_small(),
         new Endboss()
     ],
-
     [
         new Cloud('img/5_background/layers/4_clouds/1.png'),
         new Cloud('img/5_background/layers/4_clouds/2.png'),
@@ -51,7 +50,7 @@ const level1 = new Level (
         new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
         new Bottle('img/6_salsa_bottle/2_salsa_bottle_on_ground.png'),
     ],
-     [
+    [
         new Coin ('img/8_coin/coin_1.png'),
         new Coin ('img/8_coin/coin_2.png'),
         new Coin ('img/8_coin/coin_1.png'),
