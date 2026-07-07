@@ -10,6 +10,7 @@ class MovableObject {
     otherDirection = false;
     speedY = 0;
     acceleration = 2.5;
+    energy = 100;
 
 
     applyGravity() {
@@ -56,6 +57,17 @@ class MovableObject {
             this.y < mo.y + mo.height;
     }
 
+    hurt() {
+        this.energy -= 5;
+        if (this.energy < 0) {
+            this.energy = 0;
+        }
+    }
+
+    isDead() {
+        return this.energy == 0;
+    }
+
     /**
      * 
      * @param {Array} arr -['img/image1.png', 'img/image2.png', 'img/image3.png', ...]
@@ -88,4 +100,5 @@ class MovableObject {
     jump() {
         this.speedY = 30;
     }
+
 }

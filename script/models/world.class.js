@@ -24,9 +24,10 @@ class World {
 
     checkCollisions() {
         setInterval(() => {
-            this.level.enemies.forEach( (enemy) => {
+            this.level.enemies.forEach((enemy) => {
                 if(this.character.isColliding(enemy)) {
-                    console.log('collision with character ', enemy);   
+                    this.character.hurt();
+                    console.log('collision with character, energy', this.character.energy);
                 } 
             });
         }, 200);
