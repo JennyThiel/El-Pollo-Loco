@@ -25,7 +25,7 @@ class StatusBar extends DrawalbeObject {
 
     // setPercentage(50);
     setPercentage(percentage) {
-        this.img = percentage; // => 0 ... 5
+        this.percentage = percentage; // => 0 ... 5
         let path = this.IMAGES[this.resolveImageIndex()];
         this.img = this.imageCashe[path];   
     }
