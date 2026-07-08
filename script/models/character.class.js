@@ -56,14 +56,15 @@ class Character extends MovableObject {
         this.animate();
     }
 
+
     animate() {
 
         setInterval(() => {
            // this.walking_sound.pause();
             if (this.world.keyboard.RIGHT && this.x < this.world.level.level_end_x) {
                 this.moveRight();
-                // this.walking.sound.play();
                 this.otherDirection = false;
+                // this.walking.sound.play();
             }
 
             if (this.world.keyboard.LEFT && this.x > -620) {
@@ -76,12 +77,12 @@ class Character extends MovableObject {
                 this.jump();
             }
 
-            this.world.camera_x = -this.x +100;
-                
+            this.world.camera_x = -this.x +100;       
         }, 1000 / 60);
 
 
         setInterval(() => {
+
             if (this.isDead()) {
                 this.playAnimation(this.IMAGES_DEAD);
             } else if (this.isHurt()) {
@@ -89,7 +90,6 @@ class Character extends MovableObject {
             } else if (this.isAboveGround()) {
                 this.playAnimation(this.IMAGES_JUMPING);
             } else {
-                
                 if  (this.world.keyboard.RIGHT || this.world.keyboard.LEFT) {
                     this.playAnimation(this.IMAGES_WALKING);
                 }
