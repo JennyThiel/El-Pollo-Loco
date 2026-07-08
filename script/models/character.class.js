@@ -42,7 +42,7 @@ class Character extends MovableObject {
     ];
 
     world;
-    //walking_sound = new Audio('audio/running.mp3');
+    // walking_sound = new Audio('audio/running.mp3');
 
 
 
@@ -62,7 +62,7 @@ class Character extends MovableObject {
            // this.walking_sound.pause();
             if (this.world.keyboard.RIGHT && this.x < this.world.level.level_end_x) {
                 this.moveRight();
-                //this.walking.sound.play();
+                // this.walking.sound.play();
                 this.otherDirection = false;
             }
 
@@ -82,10 +82,9 @@ class Character extends MovableObject {
 
 
         setInterval(() => {
-
-             if(this.isDead()) {
+            if (this.isDead()) {
                 this.playAnimation(this.IMAGES_DEAD);
-             } else if(this.isHurt()) {
+            } else if (this.isHurt()) {
                 this.playAnimation(this.IMAGES_HURT);
             } else if (this.isAboveGround()) {
                 this.playAnimation(this.IMAGES_JUMPING);

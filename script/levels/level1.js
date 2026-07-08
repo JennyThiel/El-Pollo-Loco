@@ -43,24 +43,24 @@ const level1 = new Level (
         new BackgroundObject('img/5_background/layers/2_second_layer/2.png', 2160),
         new BackgroundObject('img/5_background/layers/1_first_layer/2.png', 2160),
     ],
-    [
-        new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
-        new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
-        new Bottle('img/6_salsa_bottle/2_salsa_bottle_on_ground.png'),
-        new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
-        new Bottle('img/6_salsa_bottle/2_salsa_bottle_on_ground.png'),
-    ],
-    [
-        new Coin ('img/8_coin/coin_1.png'),
-        new Coin ('img/8_coin/coin_2.png'),
-        new Coin ('img/8_coin/coin_1.png'),
-        new Coin ('img/8_coin/coin_1.png'),
-    ],
-    [
-        new Statusbar_Coin('img/7_statusbars/1_statusbar/1_statusbar_coin/blue/0.png', 0),
-        new Statusbar_Health('img/7_statusbars/1_statusbar/2_statusbar_health/blue/0.png', 40),
-        new Statusbar_Bottle('img/7_statusbars/1_statusbar/3_statusbar_bottle/blue/0.png',80),
-    ],
+    // [
+    //     new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
+    //     new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
+    //     new Bottle('img/6_salsa_bottle/2_salsa_bottle_on_ground.png'),
+    //     new Bottle('img/6_salsa_bottle/1_salsa_bottle_on_ground.png'),
+    //     new Bottle('img/6_salsa_bottle/2_salsa_bottle_on_ground.png'),
+    // ],
+    // [
+    //     new Coin ('img/8_coin/coin_1.png'),
+    //     new Coin ('img/8_coin/coin_2.png'),
+    //     new Coin ('img/8_coin/coin_1.png'),
+    //     new Coin ('img/8_coin/coin_1.png'),
+    // ],
+    // [
+        //  
+        // new Statusbar_Health('img/7_statusbars/1_statusbar/2_statusbar_health/blue/0.png', 40),
+        // new Statusbar_Bottle('img/7_statusbars/1_statusbar/3_statusbar_bottle/blue/0.png',80),
+    // ],
    
 
 
