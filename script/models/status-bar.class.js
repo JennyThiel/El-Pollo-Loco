@@ -16,6 +16,7 @@ class StatusBar extends DrawalbeObject {
     constructor() {
         super();
         this.loadImages(this.IMAGES);
+        // this.loadImages(this.IMAGES_BOTTLE);
         this.x = 40;
         this.y = 0;
         this.width = 250;

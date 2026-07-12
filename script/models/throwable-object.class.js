@@ -27,9 +27,18 @@ class ThrowableObject extends MovableObject {
     } 
 
     
-    throwable() {
+    throw() {
         this.speedX = 20;
-        this.speedY = 30;
-    }
+        this.speedY = 30; 
+       }
 
-}
+    animate() {
+        if (this.isRotation) {
+            this.playAnimation(this.IMAGES_ROTATION);
+        } else if (this.IMAGES_SPLASH) {
+             this.playAnimation(this.IMAGES_SPLASH);
+        }
+
+       }
+
+} 
