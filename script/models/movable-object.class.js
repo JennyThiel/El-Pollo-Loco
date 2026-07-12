@@ -35,7 +35,7 @@ class MovableObject extends DrawalbeObject {
         } else {
             this.lastHit = new Date().getTime();
         }
-    
+
     }
 
     isHurt() {
