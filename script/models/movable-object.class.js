@@ -1,15 +1,10 @@
-class MovableObject {
-    x = 20;
-    y = 135;
-    img;
-    width = 150;
-    height = 300;
-    imageCashe = {};
-    currentImage = 0;
+class MovableObject extends DrawalbeObject {
     speed = 0.15;
     otherDirection = false;
     speedY = 0;
     acceleration = 2.5;
+    energy = 100;
+    lastHit = 0;
 
 
     applyGravity() {
@@ -25,53 +20,53 @@ class MovableObject {
         return this.y < 135;
     }
 
-    // loadImage(path) {img/test.png}
-    loadImage(path) {
-        this.img = new Image(); // tihs.img - document.getElementById('image') <img id="image" src>
-        this.img.onload = () => {
-            console.log('Image loaded:', path);
-        };
-        this.img.src = path;
+    // character.isColliding(chicken);
+    isColliding(mo) {
+        return this.x + this.width > mo.x &&
+            this.y + this.height > mo.y &&
+            this.x < mo.x &&
+            this.y < mo.y + mo.height;
     }
 
-    /**
-     * 
-     * @param {Array} arr -['img/image1.png', 'img/image2.png', 'img/image3.png', ...]
-     */
+    hit() {
+        this.energy -= 5;
+        if (this.energy < 0) {
+            this.energy = 0;
+        } else {
+            this.lastHit = new Date().getTime();
+        }
 
-    loadImages(arr) {
-        arr.forEach((path) => {
-            let img = new Image();
-            img.src = path;
-            img.style = 'transform scale(-1)';
-            this.imageCashe[path] = img;
-        });
     }
+
+    isHurt() {
+        let timepassed = new Date().getTime() - this.lastHit; // Difference in ms
+        timepassed = timepassed / 1000; // Difference in s 
+        return timepassed < 1;
+    }
+
+    isDead() {
+        return this.energy == 0;
+    }
+
+    
 
     playAnimation(images) {
-        let i = this.currentImage % this.IMAGES_WALKING.length; // let i = 7 % 6 => 1 Rest 1
+        let i = this.currentImage % images.length; // let i = 7 % 6 => 1 Rest 1
         let path = images[i];
         this.img = this.imageCashe[path];
         this.currentImage++;
     }
 
     moveRight() {
-        console.log('Moving right');
-        if (keyboard.RIGHT['ArrowRight'== true]) {
-            setInterval(() => {
-                this.x += this.speed;
-            });  
-        }
-    moveRight();
+        this.x += this.speed;
     }
     
     moveLeft() {
-        setInterval(() => {
-            this.x -= this.speed;
-        },1000 / 60);  
+        this.x -= this.speed; 
     }
 
     jump() {
         this.speedY = 30;
     }
+
 }
