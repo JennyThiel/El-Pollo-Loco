@@ -1,9 +1,6 @@
 class StatusBarCoin extends DrawalbeObject {
 
-    x = 20;
-    height = 50;
-    width = 230;
-
+    
     IMAGES_COIN = [
         'img/7_statusbars/1_statusbar/1_statusbar_coin/blue/0.png',
         'img/7_statusbars/1_statusbar/1_statusbar_coin/blue/20.png',

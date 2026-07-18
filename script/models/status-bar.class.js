@@ -1,6 +1,6 @@
 class StatusBar extends DrawalbeObject {
 
-
+    
     IMAGES = [
         'img/7_statusbars/1_statusbar/2_statusbar_health/blue/0.png', // 0
         'img/7_statusbars/1_statusbar/2_statusbar_health/orange/20.png',
@@ -16,7 +16,6 @@ class StatusBar extends DrawalbeObject {
     constructor() {
         super();
         this.loadImages(this.IMAGES);
-        // this.loadImages(this.IMAGES_BOTTLE);
         this.x = 40;
         this.y = 0;
         this.width = 250;
