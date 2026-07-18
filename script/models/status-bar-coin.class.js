@@ -1,7 +1,7 @@
 class StatusBarCoin extends DrawalbeObject {
 
     
-    IMAGES_COIN = [
+    IMAGES = [
         'img/7_statusbars/1_statusbar/1_statusbar_coin/blue/0.png',
         'img/7_statusbars/1_statusbar/1_statusbar_coin/blue/20.png',
         'img/7_statusbars/1_statusbar/1_statusbar_coin/blue/40.png',
@@ -15,18 +15,18 @@ class StatusBarCoin extends DrawalbeObject {
 
     constructor() {
         super();
-        this.loadImages(this.IMAGES_COIN);
+        this.loadImages(this.IMAGES);
         this.x =40;
         this.y = 100;
         this.width = 250;
         this.height = 60;
-        this.setPercentage(100);
+        this.setPercentage(0);
     }
 
     // setPercentage(50);
     setPercentage(percentage) {
         this.percentage = percentage; // => 0 ... 5
-        let path = this.IMAGES_COIN[this.resolveImageIndex()];
+        let path = this.IMAGES[this.resolveImageIndex()];
         this.img = this.imageCache[path];   
     }
 
