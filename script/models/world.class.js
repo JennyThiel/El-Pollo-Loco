@@ -6,7 +6,7 @@ class World {
     keyboard;
     camera_x = 0;
     statusBar = new StatusBar();
-    //StatusBarBottle = new StatusBarBottle();
+    statusBarBottle = new StatusBarBottle();
     // mo = movieObject
 
     constructor(canvas, keyboard) {
@@ -45,7 +45,7 @@ class World {
         this.ctx.translate(-this.camera_x, 0);
         // ----- Space for Fixed Objeckts -----
         this.addToMap(this.statusBar);
-        // this.addToMap(this.StatusBarBottle);
+        this.addToMap(this.statusBarBottle);
         this.ctx.translate(this.camera_x, 0); // Forwards
 
         this.addToMap(this.character);

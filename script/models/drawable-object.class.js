@@ -1,6 +1,6 @@
 class DrawalbeObject {
     img;
-    imageCashe = {};
+    imageCache = {};
     currentImage = 0;
     x = 20;
     y = 135;
@@ -42,7 +42,7 @@ class DrawalbeObject {
             let img = new Image();
             img.src = path;
             img.style = 'transform scale(-1)';
-            this.imageCashe[path] = img;
+            this.imageCache[path] = img;
         });
     } 
 
