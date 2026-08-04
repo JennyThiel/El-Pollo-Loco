@@ -30,15 +30,27 @@ class ThrowableObject extends MovableObject {
     throw() {
         this.speedX = 20;
         this.speedY = 30; 
-       }
+    }
 
     animate() {
-        if (this.isRotation) {
-            this.playAnimation(this.IMAGES_ROTATION);
-        } else if (this.IMAGES_SPLASH) {
-             this.playAnimation(this.IMAGES_SPLASH);
-        }
+        setInterval(() => {
+            if (this.world.keyboard.KeyD) {
+                this.rotation();
 
-       }
+            }
+        })
 
-} 
+
+        setInterval(() => {
+            if (this.isRotation) {
+                this.playAnimation(this.IMAGES_ROTATION);
+            } else if (this.isSplash) {
+                this.playAnimation(this.IMAGES_SPLASH);
+            }
+
+        })
+        
+
+    }
+
+}
