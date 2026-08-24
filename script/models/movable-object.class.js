@@ -17,7 +17,12 @@ class MovableObject extends DrawalbeObject {
     }
 
     isAboveGround() {
-        return this.y < 135;
+        if (this instanceof ThrowableObject) { //throwableObjects shut allways fall
+            return true;
+        } else {
+            return this.y < 135;
+        }
+        
     }
 
     // character.isColliding(chicken);
