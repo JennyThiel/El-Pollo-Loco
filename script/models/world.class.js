@@ -51,28 +51,20 @@ class World {
 
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
         this.ctx.translate(this.camera_x, 0);
-
         this.addToObjectMap(this.level.backgroundObjects);
-
         this.ctx.translate(-this.camera_x, 0);
         // ----- Space for Fixed Objeckts -----
         this.addToMap(this.statusBar);
         this.addToMap(this.statusBarBottle);
         this.addToMap(this.statusBarCoin);
         this.ctx.translate(this.camera_x, 0); // Forwards
-
         this.addToMap(this.character);
         this.addToObjectMap(this.level.clouds);
         this.addToObjectMap(this.level.enemies);
         this.addToObjectMap(this.throwableObjects);
-        
-        // this.addToObjectMap(this.level.coins);
-        // this.addToObjectMap(this.level.bottles);
         this.ctx.translate(-this.camera_x, 0);
         
-       
 
         // Draw() wird hier immer wieder aufgerufen
         let self = this;
@@ -96,8 +88,7 @@ class World {
         mo.drawFrame(this.ctx);
 
         if (mo.otherDirection) {
-            this.flipImageBack(mo);
-                
+            this.flipImageBack(mo);     
         }
     }
 
@@ -115,5 +106,3 @@ class World {
 
 
 }
-
-
