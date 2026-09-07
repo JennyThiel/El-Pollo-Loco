@@ -1,12 +1,5 @@
 class ThrowableObject extends MovableObject {
 
-    // IMAGES_ROTATION = [
-    //     'img/6_salsa_bottle/bottle_rotation/1_bottle_rotation.png',
-    //     'img/6_salsa_bottle/bottle_rotation/2_bottle_rotation.png',
-    //     'img/6_salsa_bottle/bottle_rotation/3_bottle_rotation.png',
-    //     'img/6_salsa_bottle/bottle_rotation/4_bottle_rotation.png',
-    // ];
-
     // IMAGES_SPLASH = [
     //     'img/6_salsa_bottle/bottle_rotation/bottle_splash/1_bottle_splash.png',
     //     'img/6_salsa_bottle/bottle_rotation/bottle_splash/2_bottle_splash.png',
@@ -19,6 +12,8 @@ class ThrowableObject extends MovableObject {
 
     constructor(x, y) {
         super().loadImage('img/6_salsa_bottle/salsa_bottle.png');
+        // this.loadImages(IMAGES_ROTATION[0]);
+        // this.loadImages(IMAGES_SPLASH[0]);
         this.x = x;
         this.y = y;
         this.height = 60;
@@ -26,13 +21,6 @@ class ThrowableObject extends MovableObject {
         this.throw();
     
     }
-        // this.loadImages(this.IMAGES_ROTATION[0]);
-        // this.loadImages(this.IMAGES_SPLASH);
-        // 
-        // 
-        // this.animate();
-    
-
     
     throw() {
         this.speedY = 30;
