@@ -32,7 +32,7 @@ class DrawalbeObject {
             ctx.stroke();            
         }
     }
-
+ 
     /**
      * 
      * @param {Array} arr -['img/image1.png', 'img/image2.png', 'img/image3.png', ...]

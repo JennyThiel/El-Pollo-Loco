@@ -52,14 +52,23 @@ class MovableObject extends DrawalbeObject {
     isDead() {
         return this.energy == 0;
     }
-
-    
+   
 
     playAnimation(images) {
         let i = this.currentImage % images.length; // let i = 7 % 6 => 1 Rest 1
         let path = images[i];
         this.img = this.imageCache[path];
         this.currentImage++;
+    }
+
+    currentDeadImage = 0;
+
+    playAnimationOnce(images) {
+        if (this.currentDeadImage < images.length) {
+            let path = images[this.currentDeadImage];
+            this.img = this.imageCache[path];
+            this.currentDeadImage++;
+        }
     }
 
     moveRight() {
