@@ -70,8 +70,6 @@ class Character extends MovableObject {
     world;
     // walking_sound = new Audio('audio/running.mp3');
 
-
-
     constructor() {
         super().loadImage(this.IMAGES_WALKING[0]);
         this.loadImages(this.IMAGES_WALKING);
@@ -83,7 +81,6 @@ class Character extends MovableObject {
         this.applyGravity();
         this.animate();
     }
-
 
     animate() {
 

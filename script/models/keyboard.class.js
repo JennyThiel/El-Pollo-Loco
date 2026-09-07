@@ -7,4 +7,3 @@ class Keyboard {
     D = false;
     E = false;
 }
-
