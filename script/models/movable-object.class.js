@@ -21,8 +21,7 @@ class MovableObject extends DrawalbeObject {
             return true;
         } else {
             return this.y < 135;
-        }
-        
+        }   
     }
 
     // character.isColliding(chicken);
@@ -40,7 +39,6 @@ class MovableObject extends DrawalbeObject {
         } else {
             this.lastHit = new Date().getTime();
         }
-
     }
 
     isHurt() {
@@ -68,8 +66,8 @@ class MovableObject extends DrawalbeObject {
             let path = images[this.currentDeadImage];
             this.img = this.imageCache[path];
             this.currentDeadImage++;
-        }
-    }
+        }    
+    } 
 
     moveRight() {
         this.x += this.speed;

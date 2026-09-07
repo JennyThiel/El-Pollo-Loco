@@ -59,4 +59,3 @@ window.addEventListener('keyup', (e) => {
         keyboard.E = false;
     }
 });
-

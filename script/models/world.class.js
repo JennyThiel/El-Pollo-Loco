@@ -8,8 +8,8 @@ class World {
     statusBar = new StatusBar();
     statusBarBottle = new StatusBarBottle();
     statusBarCoin = new StatusBarCoin();
+    statusBarEndboss = new StatusBarEndboss();
     throwableObjects = [];
-    // mo = movieObject
 
     constructor(canvas, keyboard) {
         this.ctx = canvas.getContext('2d');
@@ -71,6 +71,7 @@ class World {
         this.addToMap(this.character);
         this.addToObjectMap(this.level.clouds);
         this.addToObjectMap(this.level.enemies);
+        this.addToMap(this.statusBarEndboss);
         this.addToObjectMap(this.throwableObjects);
         this.ctx.translate(-this.camera_x, 0);
         
@@ -112,6 +113,4 @@ class World {
         mo.x = mo.x *-1;
         this.ctx.restore();
     }
-
-
 }
