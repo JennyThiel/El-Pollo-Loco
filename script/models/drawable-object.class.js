@@ -8,8 +8,6 @@ class DrawalbeObject {
     height = 300;
 
 
-
-    
     // loadImage(path) {img/test.png}
     loadImage(path) {
         this.img = new Image(); // tihs.img = document.getElementById('image') <img id="image" src>
@@ -44,6 +42,5 @@ class DrawalbeObject {
             img.style = 'transform scale(-1)';
             this.imageCache[path] = img;
         });
-    } 
-
+    }
 }

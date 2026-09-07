@@ -20,7 +20,7 @@ class StatusBarEndboss extends DrawalbeObject {
         this.y = 430;
         this.width = 350;
         this.height = 50;
-        this.setPercentage(0);
+        this.setPercentage(100);
     }
 
     // setPercentage(50);
